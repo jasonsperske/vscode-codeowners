@@ -2,9 +2,9 @@
     "name": "vscode-codeowners",
     "displayName": "CODEOWNERS",
     "description": "VS Code extension for CODEOWNERS file",
-    "publisher": "jasonnutter",
+    "publisher": "jasonsperske",
     "repository": {
-        "url": "https://github.com/jasonnutter/vscode-codeowners"
+        "url": "https://github.com/jasonsperske/vscode-codeowners"
     },
     "license": "MIT",
     "version": "1.1.2",
@@ -58,6 +58,6 @@
         "vscode": "^1.1.36"
     },
     "dependencies": {
-        "codeowners": "https://github.com/jasonsperske/codeowners.git"
+        "codeowners": "github:jasonsperske/codeowners"
     }
 }
