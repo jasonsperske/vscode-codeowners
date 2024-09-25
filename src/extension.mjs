@@ -1,8 +1,8 @@
-const vscode = require('vscode');
-const Codeowners = require('codeowners');
-const path = require('path');
+import vscode from 'vscode';
+import Codeowners from 'codeowners';
+import path from 'path';
 
-const COMMAND_ID = 'vscode-codeowners.show-owners';
+const COMMAND_ID = 'vscode-codeowners-gitlab-extended.show-owners';
 const STATUS_BAR_PRIORITY = 100;
 
 const getOwners = () => {
@@ -19,7 +19,8 @@ const getOwners = () => {
     let folder;
     try {
         folder = new Codeowners(workspacePath);
-    } catch {
+    } catch (e) {
+        console.log(e);
         // no CODEOWNERS file
         return null;
     }

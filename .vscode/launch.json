@@ -1,29 +1,32 @@
-// A launch configuration that launches the extension inside a new window
-// Use IntelliSense to learn about possible attributes.
-// Hover to view descriptions of existing attributes.
-// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
 {
-	"version": "0.2.0",
+    "version": "0.1.0",
     "configurations": [
         {
-            "name": "Extension",
             "type": "extensionHost",
             "request": "launch",
+            "name": "Launch extension",
+            "preLaunchTask": "Build extension",
             "runtimeExecutable": "${execPath}",
             "args": [
                 "--disable-extensions",
                 "--extensionDevelopmentPath=${workspaceFolder}"
-            ]
+            ],
+            "stopOnEntry": false,
+            "sourceMaps": true,
+            "outFiles": [ "${workspaceRoot}/dist/**/*.cjs" ]
         },
         {
-            "name": "Extension Tests",
             "type": "extensionHost",
             "request": "launch",
+            "name": "Launch extension without build",
             "runtimeExecutable": "${execPath}",
             "args": [
-                "--extensionDevelopmentPath=${workspaceFolder}",
-                "--extensionTestsPath=${workspaceFolder}/test"
-            ]
+                "--disable-extensions",
+                "--extensionDevelopmentPath=${workspaceFolder}"
+            ],
+            "stopOnEntry": false,
+            "sourceMaps": true,
+            "outFiles": [ "${workspaceRoot}/dist/**/*.cjs" ]
         }
     ]
 }
