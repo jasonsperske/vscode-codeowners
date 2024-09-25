@@ -1,7 +1,7 @@
 {
-    "name": "vscode-codeowners",
-    "displayName": "CODEOWNERS",
-    "description": "VS Code extension for CODEOWNERS file",
+    "name": "jasonsperske-vscode-codeowners",
+    "displayName": "jasonsperske-CODEOWNERS",
+    "description": "VS Code extension for CODEOWNERS file with GitLab's Default Owners feature support",
     "publisher": "jasonsperske",
     "repository": {
         "url": "https://github.com/jasonsperske/vscode-codeowners"
