@@ -7,7 +7,7 @@
         "url": "https://github.com/jasonnutter/vscode-codeowners"
     },
     "license": "MIT",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "engines": {
         "vscode": "^1.29.0"
     },
@@ -58,6 +58,6 @@
         "vscode": "^1.1.36"
     },
     "dependencies": {
-        "codeowners": "^4.1.1"
+        "codeowners": "https://github.com/jasonsperske/codeowners.git"
     }
 }
