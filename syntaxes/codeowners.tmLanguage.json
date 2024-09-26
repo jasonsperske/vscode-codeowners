@@ -1,39 +1,52 @@
 {
-  "name": "codeowners",
-  "patterns": [
-    {
-      "include": "#comment"
-    },
-    {
-      "include": "#pattern"
-    },
-    {
-      "include": "#owner"
-    }
-  ],
-  "repository": {
-    "comment": {
-      "patterns": [
+    "name": "codeowners",
+    "patterns": [
         {
-          "begin": "^\\s*#",
-          "captures": {
-            "0": {
-              "name": "punctuation.definition.comment.codeowners"
-            }
-          },
-          "end": "$",
-          "name": "comment.line.codeowners"
+            "include": "#section"
+        },
+        {
+            "include": "#comment"
+        },
+        {
+            "include": "#pattern"
+        },
+        {
+            "include": "#owner"
         }
-      ]
+    ],
+    "repository": {
+        "comment": {
+            "patterns": [
+                {
+                    "begin": "^\\s*#",
+                    "captures": {
+                        "0": {
+                            "name": "punctuation.definition.comment.codeowners"
+                        }
+                    },
+                    "end": "$",
+                    "name": "comment.line.codeowners"
+                }
+            ]
+        },
+        "pattern": {
+            "match": "^\\s*(\\S+)",
+            "name": "variable.other.codeowners"
+        },
+        "owner": {
+            "match": "\\S*@\\S+",
+            "name": "storage.type.function.codeowners"
+        },
+        "section": {
+            "begin": "^\\[",
+            "captures": {
+                "0": {
+                    "name": "punctuation.definition.section.begin.codeowners"
+                }
+            },
+            "end": "\\]",
+            "name": "entity.name.section.codeowners"
+        }
     },
-    "pattern": {
-      "match": "^\\s*(\\S+)",
-      "name": "variable.other.codeowners"
-    },
-    "owner": {
-      "match": "\\S*@\\S+",
-      "name": "storage.type.function.codeowners"
-    }
- },
-  "scopeName": "text.codeowners"
+    "scopeName": "text.codeowners"
 }

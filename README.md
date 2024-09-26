@@ -21,4 +21,4 @@ The first code owners for an open file will be displayed in the right side of th
 
 ![](./img/command.gif)
 
-Use the command palette to run the `CODEOWNERS: Show owners of current file` command, which will display all code owners for the current file.
+Use the command palette to run the `CODEOWNERS: Show owners of current file` command, which will display all code owners for the current file. If you select a name form the list then it is automatically copied into your clipboard.

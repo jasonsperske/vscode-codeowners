@@ -39,8 +39,11 @@ const activate = context => {
     context.subscriptions.push(statusBarItem);
 
     context.subscriptions.push(
-        vscode.commands.registerCommand(COMMAND_ID, () => {
-            vscode.window.showQuickPick(getOwners());
+        vscode.commands.registerCommand(COMMAND_ID, async () => {
+            const selection = await vscode.window.showQuickPick(getOwners());
+            if (selection) {
+                vscode.env.clipboard.writeText(selection);
+            }
         })
     );
 
